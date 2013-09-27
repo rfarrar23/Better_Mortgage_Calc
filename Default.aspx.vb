@@ -1,8 +1,9 @@
-﻿
+﻿Imports System.Data
+
 Partial Class _Default
     Inherits System.Web.UI.Page
 
-    Protected Sub calcPMT_Click(sender As Object, e As EventArgs) Handles calcPMT.Click
+    Protected Sub calcPMT_Click(sender As Object, e As EventArgs) Handles btnCalcPmt.Click
         'Declaring the Variables for each field.
         Dim loanAmount As Double
         Dim annualRate As Double
@@ -51,8 +52,7 @@ Partial Class _Default
             'Writes the data to a new row in the gridview.
             tRow = loanAmortTbl.NewRow()
             tRow("Payment Number") = String.Format(counterStart)
-            tRow("Principal Paid") = String.Format("{0:C}", principal) ' String.Format("{0:C},principal) formats the variable "prinicpal" as
-            currency(C).
+            tRow("Principal Paid") = String.Format("{0:C}", principal) ' String.Format("{0:C},principal) formats the variable "prinicpal" as currency(C).
             tRow("Interest Paid") = String.Format("{0:C}", interestPaid)
             tRow("New Balance") = String.Format("{0:C}", nBalance)
             loanAmortTbl.Rows.Add(tRow)

@@ -16,7 +16,8 @@ Loan Amount:<asp:TextBox ID="tbLoanAmt" runat="server" ></asp:TextBox>
 Annual Interest %: <asp:TextBox ID="tbAnnualInterest" runat="server"
 ></asp:TextBox>
 <br /><br />
-Loan Term (Yrs): <asp:TextBox ID="tbLoanTerm" runat="server" ></asp:TextBox>
+Loan Term (Yrs): 
+        <asp:TextBox ID="tbLoanTerm" runat="server"></asp:TextBox>
 <br /><br />
 <asp:Button ID="btnCalcPmt" runat="server" Text="Calculate" />
 <br /><br />
