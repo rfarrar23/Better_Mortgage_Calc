@@ -24,9 +24,20 @@ Loan Term (Yrs):
 <br /><br />
 <asp:Button ID="btnCalcPmt" runat="server" Text="Calculate" />
 <br /><br />
+
+
+<% If Not IsPostBack Then %>
+        
+        <p> Welcome to my mortgage calculator. Please complete the fields above to have your monthly payment and loan calculated for you. </p>
+            
+ <% Else%>
+
+
 Monthly Payment: &nbsp; <asp:Label ID="lblMonthlyPmt" runat="server"></asp:Label>
 <br /><br />
 <asp:GridView ID="loanGridView" runat="server" />
+
+    <% End If%>
 </div>
 </form>
 </body>
